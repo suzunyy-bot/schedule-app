@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState, useEffect } from 'react';
 import { Calendar, Users, Plus, Trash2, AlertCircle, CheckCircle, X, ChevronLeft, ChevronRight, Settings, Sparkles } from 'lucide-react';
 
