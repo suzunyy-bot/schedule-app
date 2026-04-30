@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { useState, useEffect } from 'react';
-import { Calendar, Users, Plus, Trash2, AlertCircle, CheckCircle, X, ChevronLeft, ChevronRight, Settings, Sparkles } from 'lucide-react';
+import { Users, Plus, Trash2, AlertCircle, CheckCircle, X, ChevronLeft, ChevronRight, Settings, Sparkles } from 'lucide-react';
 
 export default function ScheduleApp() {
   const colorPalette = [
@@ -41,12 +41,13 @@ export default function ScheduleApp() {
   const [showMembers, setShowMembers] = useState(false);
   const [activeMember, setActiveMember] = useState(null);
 
-  useEffect(() => {
+useEffect(() => {
     const initial = {};
     members.forEach(m => {
       initial[m.id] = memberDates[m.id] || [];
     });
     setMemberDates(initial);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const toggleDate = (date, memberId) => {
